@@ -1,0 +1,34 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  height: 30px;
+  z-index: 1;
+  background-color: #111;
+}
+.nav > span {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+}
+.navright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navright > span {
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.nav__avatar {
+  position: fixed;
+  right: 20px;
+  width: 30px;
+  object-fit: contain;
+}

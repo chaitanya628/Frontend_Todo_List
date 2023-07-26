@@ -1,0 +1,36 @@
+.table_head {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: #1c1c1c;
+}
+.table_column {
+  color: #636365;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  white-space: nowrap;
+  /* max-width: 40px; */
+}
+.tablecompleted {
+  background-color: #b2ddb2;
+}
+
+.career_lastcol {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.loader_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
