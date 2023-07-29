@@ -63,7 +63,6 @@ export function updateTodoData(id, data, fetchData) {
       }
     } catch (err) {
       console.log(err);
-      // dispatch(setStatus(STATUSES.ERROR));
     }
   };
 }

@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:5000/";
-// const API_BASE_URL = 'http://35.175.83.77:3000/'
+// const API_BASE_URL = "http://localhost:5000/";
+const API_BASE_URL = "https://todolist-backend-vlla.onrender.com/";
 const api = {
   applicationApi: async (url, method, data) => {
     const token = localStorage.getItem("login_token");

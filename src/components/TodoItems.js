@@ -72,7 +72,13 @@ const TodoItems = (props) => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {props.data?.length !== 0 ? (
+          {props.data?.length === 0 ? (
+            <TableRow>
+              <TableCell colSpan={5}>
+                <Box className="loader_box"> No Data Found</Box>
+              </TableCell>
+            </TableRow>
+          ) : props.data?.length !== 0 ? (
             props.data?.map((row) => (
               <TableRow
                 key={row.title}
@@ -170,11 +176,7 @@ const TodoItems = (props) => {
               </TableRow>
             ))
           ) : (
-            <TableRow>
-              <TableCell colSpan={5}>
-                <Box className="loader_box"> No Data Found</Box>
-              </TableCell>
-            </TableRow>
+            <></>
           )}
         </TableBody>
       </Table>

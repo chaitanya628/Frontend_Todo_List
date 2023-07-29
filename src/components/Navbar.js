@@ -28,8 +28,13 @@ function Navbar() {
     username: "",
   });
 
-  const fetchData = () => {
-    dispatch(fetchProfile(setUser));
+  const fetchData = async () => {
+    try {
+      const response = await fetchProfile(setUser);
+      return response;
+    } catch (err) {
+      console.log(err);
+    }
   };
   const logoutUser = () => {
     localStorage.removeItem("login_token");

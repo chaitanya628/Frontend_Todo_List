@@ -35,10 +35,14 @@ export default function RegisterPage() {
     const { name, value } = e.target;
     setUser({ ...user, [name]: value });
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log(user);
-    dispatch(Registeration(user, navigate, setUser));
+    try {
+      const apiResponse = await Registeration(user, navigate, setUser);
+      console.log(apiResponse);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (

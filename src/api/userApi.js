@@ -28,7 +28,6 @@ export async function loginApi(data, navigate) {
 }
 
 export async function Registeration(data, navigate, setUser) {
-  // return async function fetchProductThunk(dispatch, getState, setUser) {
   try {
     const apiResponse = await api.applicationApi(
       "api/user/register",
@@ -56,24 +55,20 @@ export async function Registeration(data, navigate, setUser) {
     }
   } catch (err) {
     console.log(err);
-    // Errornotify(" Network error");
   }
 }
-export function fetchProfile(setUser) {
-  return async function fetchUsertypesThunk(dispatch, getState) {
-    try {
-      // const apiResponse = await axios.post('api/user/register',data)
-      const apiResponse = await api.applicationApi("api/user/profile", "GET");
-      if (apiResponse.status === 200) {
-        setUser(apiResponse.data.result);
-      } else {
-        if (apiResponse.status === 401) {
-          alert("error occured");
-        }
-        return false;
+export async function fetchProfile(setUser) {
+  try {
+    const apiResponse = await api.applicationApi("api/user/profile", "GET");
+    if (apiResponse.status === 200) {
+      setUser(apiResponse.data.result);
+    } else {
+      if (apiResponse.status === 401) {
+        alert("error occured");
       }
-    } catch (err) {
-      console.log(err);
+      return false;
     }
-  };
+  } catch (err) {
+    console.log(err);
+  }
 }

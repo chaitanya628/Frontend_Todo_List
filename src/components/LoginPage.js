@@ -21,7 +21,7 @@ const defaultTheme = createTheme();
 
 export default function LoginPage() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   const [data, setData] = useState({
     username: "",
     password: "",
@@ -30,9 +30,14 @@ export default function LoginPage() {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
   };
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    dispatch(loginApi(data, navigate));
+    try {
+      const apiResponse = await loginApi(data, navigate);
+      console.log(apiResponse);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
