@@ -34,7 +34,6 @@ export default function LoginPage() {
     event.preventDefault();
     try {
       const apiResponse = await loginApi(data, navigate);
-      console.log(apiResponse);
     } catch (err) {
       console.error(err);
     }

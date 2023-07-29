@@ -47,7 +47,6 @@ function Navbar() {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log(user);
 
   // const handleProfileClick = () => {
   //   history.push("/profile", { user });

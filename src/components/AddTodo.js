@@ -73,7 +73,7 @@ function AddTodo(props) {
   };
   const handleChangeData = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
+    // console.log(name, value);
     setData({ ...data, [name]: value });
   };
   const handleClose = () => props.setOpen(false);

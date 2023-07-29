@@ -39,7 +39,7 @@ export default function RegisterPage() {
     event.preventDefault();
     try {
       const apiResponse = await Registeration(user, navigate, setUser);
-      console.log(apiResponse);
+      // console.log(apiResponse);
     } catch (err) {
       console.error(err);
     }

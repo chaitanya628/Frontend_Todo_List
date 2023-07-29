@@ -40,7 +40,6 @@ const TodoItems = (props) => {
     dispatch(fetchTodoList());
   };
   const handleStatusChange = (e, row) => {
-    console.log(row);
     const updatedRow = { ...row, status: e.target.value === "Completed" };
     dispatch(updateTodoData(row._id, updatedRow, fetchData));
   };

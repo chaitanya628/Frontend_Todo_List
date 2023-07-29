@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 
 function Profile(props) {
   const { state } = useLocation();
-  console.log(state);
+  // console.log(state);
   return (
     <div>
       <Navbar />
