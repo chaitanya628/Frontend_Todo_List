@@ -1,4 +1,6 @@
+![Todo List](https://github.com/chaitanya628/Frontend_Todo_List/assets/98814816/7ea878c7-4744-4013-871e-7785aa3d872b)
 # Getting Started with Create React App
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
